@@ -13,6 +13,22 @@ bash logtop.sh /var/log/nginx/access.log --by status
 bash logtop.sh /var/log/auth.log         --by 'Failed password.*from ([0-9.]+)'
 ```
 
+## Demo
+
+Recorded with [asciinema](https://asciinema.org/). View it locally:
+
+```bash
+# install asciinema if needed: pip install asciinema
+asciinema play demo.cast
+```
+
+Or upload to asciinema.org for an embeddable badge:
+
+```bash
+asciinema auth      # one-time, opens browser
+asciinema upload demo.cast
+```
+
 ## Why
 
 When something goes wrong in production, you `tail -f` a log and your eyes glaze over. You really want to know **"which IP is hammering us?"** or **"how many 5xx in the last minute?"** — that's `logtop`.
